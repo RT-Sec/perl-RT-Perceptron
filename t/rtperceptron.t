@@ -1,10 +1,27 @@
+# Author: Ernest Deak
+# License: GPLv3
+# This file is part of RT::Perceptron.
+#
+# RT::Perceptron is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# RT::Perceptron is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with RT::Perceptron.  If not, see <https://www.gnu.org/licenses/>.
+
 use strict;
 use warnings FATAL => qw(all);
 use Program qw(lambda curry Program);
 use Test::More;
 use Data::Dumper;
 use Carp;
-use lib 'modules';
+use lib 'lib';
 use RT::Perceptron qw(dot);
 use List::Util qw(sum);
 

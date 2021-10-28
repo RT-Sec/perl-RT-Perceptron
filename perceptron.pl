@@ -1,3 +1,5 @@
+# Standard perceptron example from AI::Perceptron CPAN package
+# This file contains only example usage
 use strict;
 use warnings;
 

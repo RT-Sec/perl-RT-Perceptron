@@ -1,0 +1,9 @@
+Revision history for Perl extension RT::Perceptron.
+
+0.01  Thu Oct 28 15:16:57 2021
+	- original version; created by h2xs 1.23 with options
+		-AX RT::Perceptron
+	- Working version
+	- Checked working trainw function. Learns correctly
+	- Checked for AND, OR, NAND, NOT implementations. Working.
+

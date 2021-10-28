@@ -1,19 +1,38 @@
+# Author: Ernest Deak
+# License: GPLv3
+# This file is part of RT::Perceptron.
+#
+# RT::Perceptron is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# RT::Perceptron is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+
+# along with RT::Perceptron.  If not, see <https://www.gnu.org/licenses/>.
 
 package RT::Perceptron;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-use Carp;
+use Carp qw(confess);
+
 use Data::Dumper;
 
 our @EXPORT_OK = qw(dot);
 
 our $VERSION = "0.01";
 
+
 sub dot($$){
   my ($matrix1, $matrix2) = @_;
-  carp "Both parameters must be array references" unless ref($matrix1) eq "ARRAY" and ref($matrix2) eq "ARRAY";
-  carp "Matrices must be of equal size" unless @$matrix1 == @$matrix2;
+  confess "Both parameters must be array references" unless ref($matrix1) eq "ARRAY" and ref($matrix2) eq "ARRAY";
+  confess "Matrices must be of equal size" unless @$matrix1 == @$matrix2;
   my $r = 0;
   for(0 .. $#$matrix1){
     $r += $$matrix1[$_] * $$matrix2[$_];

@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/rtperceptron.t
+lib/RT/Perceptron.pm

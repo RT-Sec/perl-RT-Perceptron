@@ -97,5 +97,54 @@ sub trainw {
   }
   TRAINED:
 }
-
 1;
+__END__
+=pod
+
+=head1 NAME
+
+RT::Perceptron
+
+=head1 SYNOPSIS
+
+  use RT::Perceptron;
+  use Test::More;
+
+  my $rtp = RT::Perceptron->new(
+    w => [0.0,0.0],   #weights
+    b => 0.1,         #bias
+    t => 0.0,         #threshold
+    r => 0.04         #learning rate
+  );
+  # AND gate
+  $rtp->trainw([
+    1 => [1,1],
+    0 => [0,0],
+    0 => [0,1],
+    0 => [1,0]
+  ],1); # MAX 1 iteration
+
+  # Check results
+  is $rtp->input(0,0), 0;
+  is $rtp->input(1,1), 1;
+  is $rtp->input(0,1), 0;
+  is $rtp->input(1,0), 0;
+
+  done_testing;
+
+=head1 COPYRIGHT AND LICENSE
+
+Ernest Deak (C) 2021 - All rights reserved
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.

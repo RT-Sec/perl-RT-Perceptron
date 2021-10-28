@@ -6,4 +6,7 @@ Revision history for Perl extension RT::Perceptron.
 	- Working version
 	- Checked working trainw function. Learns correctly
 	- Checked for AND, OR, NAND, NOT implementations. Working.
+	- Integration with the Program.pm module has
+		been verified to work but not extensively tested, only
+		surface level testing has been performed
 

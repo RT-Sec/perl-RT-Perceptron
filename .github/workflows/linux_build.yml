@@ -28,8 +28,9 @@ jobs:
       - name: Install needed software
         run: |
           sudo apt-get install perlbrew
-          perlbrew install "5.32"
-          perlbrew switch "5.32"
+          perlbrew init
+          perlbrew --notest install "5.32.0"
+          perlbrew switch "5.32.0"
           wget -q https://github.com/majorendian/perl-Program/archive/refs/heads/master.zip -O program.zip
           unzip -x program.zip
           cd perl-Program-master && perl Makefile.PL && make install && cd ..

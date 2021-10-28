@@ -25,11 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      name: Install needed software
-      run: apt-get install cpanm -y
+      - name: Install needed software
+        run: apt-get install cpanm -y
 
-      name: Install dependencies
-      run: cpanm --install-debs
+      - name: Install dependencies
+        run: cpanm --install-debs
 
       # Runs a single command using the runners shell
       - name: Test the code with `prove`

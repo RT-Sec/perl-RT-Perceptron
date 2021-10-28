@@ -1,5 +1,7 @@
 # RT::Perceptron
 
+[![linux_build](https://github.com/RT-Sec/perl-RT-Perceptron/actions/workflows/linux_build.yml/badge.svg?branch=master)](https://github.com/RT-Sec/perl-RT-Perceptron/actions/workflows/linux_build.yml)
+
 Custom implementation of the Perceptron algorithm.  
 You can check how this is implemented by checking out  
 my document file on it:  

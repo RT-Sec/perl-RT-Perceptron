@@ -35,6 +35,9 @@ jobs:
           unzip -x program.zip
           perlbrew switch "5.32.1" && cd perl-Program-master && perl Makefile.PL && make install && cd ..
 
-      # Runs a single command using the runners shell
       - name: Test the code with `prove`
-        run: perlbrew switch "5.32.1" && prove -v
+        run: | 
+          source ~/perl5/perlbrew/etc/bashrc
+          perlbrew switch "5.32.1"
+          prove -v
+          

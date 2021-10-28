@@ -41,5 +41,5 @@ after installation.
 ```
 
 ## LICENSE
-See COPYING for Licesing information
+See COPYING for Licensing information
 

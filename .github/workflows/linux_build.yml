@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install needed software
-        run: apt-get install cpanm -y
+        run: sudo apt-get install cpanm -y
 
       - name: Install dependencies
         run: cpanm --install-debs

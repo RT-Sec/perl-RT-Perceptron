@@ -15,7 +15,7 @@ To install this module type the following:
 
 DEPENDENCIES
 
-This module requires these other modules and libraries:
+Carp, Data::Dumper, Exporter
 
 COPYRIGHT AND LICENCE
 

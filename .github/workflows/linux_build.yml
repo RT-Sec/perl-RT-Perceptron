@@ -33,7 +33,7 @@ jobs:
           perlbrew --notest install "5.32.1"
           wget -q https://github.com/majorendian/perl-Program/archive/refs/heads/master.zip -O program.zip
           unzip -x program.zip
-          cd perl-Program-master && perl Makefile.PL && make install && cd ..
+          perlbrew switch "5.32.1" && cd perl-Program-master && perl Makefile.PL && make install && cd ..
 
       # Runs a single command using the runners shell
       - name: Test the code with `prove`

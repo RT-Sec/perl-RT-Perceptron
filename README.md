@@ -1,4 +1,5 @@
-# RT::Perceptron
+
+# ![](https://www.gnu.org/graphics/gplv3-or-later.png) RT::Perceptron
 
 [![linux_build](https://github.com/RT-Sec/perl-RT-Perceptron/actions/workflows/linux_build.yml/badge.svg?branch=master)](https://github.com/RT-Sec/perl-RT-Perceptron/actions/workflows/linux_build.yml)
 
